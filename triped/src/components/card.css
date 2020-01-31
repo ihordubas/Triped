@@ -1,0 +1,39 @@
+.card-item {
+    display: flex;
+    background-color: #697d71;
+    border-radius: 5px;
+    min-width: 300px;
+    height: 200px;
+    margin: 20px 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-item:hover, .add-trip-button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card-title {
+    color: white;
+    font-size: 22px;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.add-trip-button {
+	border: 0;
+	border-radius: 7px;
+	background-color: #595454;
+	color: white;
+	width: 180px;
+	height: 45px;
+    font-size: 18px;
+    outline: 0;
+}
