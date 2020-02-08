@@ -1,39 +1,100 @@
+body {
+    background-color: #f5f0ed;
+    font-family: 'Oswald', sans-serif;
+}
+
 .card-item {
     display: flex;
     background-color: #697d71;
-    border-radius: 5px;
-    min-width: 300px;
-    height: 200px;
-    margin: 20px 15px;
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+    margin: 15px;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.card-item:hover, .add-trip-button:hover {
+.MuiSvgIcon-root {
+    margin: 5px 5px 0 5px;
+}
+
+.card-item:hover, .add-trip-button:hover, .card-details:hover  {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
+.MuiInputBase-root{
+    width: 400px;
+}
+
 .card-title {
     color: white;
-    font-size: 22px;
+    font-size: 28px;
+    text-align: center;
 }
 
 .card-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
 .add-trip-button {
 	border: 0;
+    outline: 0;
 	border-radius: 7px;
 	background-color: #595454;
 	color: white;
 	width: 180px;
 	height: 45px;
     font-size: 18px;
-    outline: 0;
+}
+
+#remove-card-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+}
+
+#card-input  {
+    margin: 70px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.MuiFormLabel-root.Mui-focus {
+    color: #697d71 !important;
+}
+
+.MuiInput-underline:after {
+    border-bottom: 1px solid #697d71 !important;
+} 
+
+.MuiPaper-root {
+    width: 500px;
+}
+
+.MuiDialog-paperWidthSm   {
+    border-radius: 12px !important;
+    background-color: #f5f0ed !important;
+}
+
+.MuiDialogTitle-root, .alert-dialog-text {
+    display: flex;
+    justify-content: center;
+}
+
+.MuiButton-label {
+    color: #697d71;
+    font-weight: bold;
+}
+    
+#buttons-dialog {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
 }
