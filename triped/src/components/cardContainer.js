@@ -4,14 +4,39 @@ import TextField from '@material-ui/core/TextField';
 
 import CardItem from './cardItem'
 import {data} from './mockedData';
+import request from "../services/request";
 
 import './card.css'
 
 
 export default class CardContainer extends React.Component {
     state = {
-        cardList: []
+        cardList: [],
+        loading: true,
+        error: false
     }
+
+    componentDidMount() {
+        this.queryData()
+    }
+
+    queryData = () => {
+        const url = '/trips';
+
+        request.get(url)
+            .then(response => {
+                this.setState({
+                    cardList: response.data,
+                    'loading': false,
+                    'error': false
+                });
+            })
+            .catch(() => {
+                this.setState({
+                    error: true
+                });
+            })
+    };
    
     addTrip = () => {
         this.setState({
@@ -25,25 +50,17 @@ export default class CardContainer extends React.Component {
     }
 
     render () {
-        return (
-            <>
-                <div id="card-input">
-                    <TextField   
-                        size="medium"
-                        onBlur={this.addTrip}
-                        label="Where are you going next?" 
-                    />
-                </div>
-                <div className="card-grid">
-                    
+        const { error, loading, data } = this.state;
+        console.log(data)
+        if (error) return <div>Data could not be loaded</div>;
+        else if (loading) return <div>Loading data...</div>;
+        else  
+            return (
+                <div className="card-grid">                
                     {this.state.cardList.map(item => 
-                        
-                        <CardItem key={item.id} item={item} removeCard={this.removeCard} title={item.title} />  
-                        
+                        <CardItem key={item._id.$oid} item={item} removeCard={this.removeCard} title={item.title} />  
                     )}
                 </div>
-              
-            </>
-        )
+            )
     }
 }
