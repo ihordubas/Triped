@@ -42,7 +42,7 @@ export default class CardItem extends React.Component {
             return (
                 <div className="card-item">
                     <div 
-                        data-id={item.id} 
+                        data-id={item._id.$oid} 
                         className="card-title" 
                         onClick={this.toogleShowDetails}>
                         {this.props.title}
@@ -58,7 +58,7 @@ export default class CardItem extends React.Component {
                                     <div className="alert-dialog-text">Are you sure you want to delete this item?</div>
                                     <div id="buttons-dialog">
                                         <Button 
-                                            data-id={item.id} 
+                                            data-id={item._id.$oid} 
                                             color="primary"
                                             onClick={() => removeCard(item.id)}
                                             >Yes
