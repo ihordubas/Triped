@@ -7,24 +7,21 @@ import {HouseData, MovingData} from "./tripData";
 
 export default class CardDetails extends React.Component {
      sumOfPrices = () => {
-          const { item } = this.props
-          let sum = 0
-          item.trips.map(item => {
-              sum += item.price
-          })
-          return sum
+        const { item } = this.props
+        return item.trips.reduce((prevValue, currentValue) => prevValue.price + currentValue.price)
     }
 
     render () {
         const { toogleShowDetails, item } = this.props
+        console.log(item)
         return (
             <div className="card-details">
                 <div className="card-title-inside" onClick={toogleShowDetails}>{item.title}</div>
-                 {item.trips.map(trip => {
+                 {item.trips && item.trips.map(trip => {
                     if (trip.type == 'house') return <HouseData data={trip} />
                     else return <MovingData data={trip}/>
                 })}
-                {this.sumOfPrices()}
+                {/* {this.sumOfPrices()} */}
                 <div className="button-plus">
                     <AddBoxOutlinedIcon style={{ fontSize: 40 }} />
                 </div>
