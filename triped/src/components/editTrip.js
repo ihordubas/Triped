@@ -25,7 +25,6 @@ export default class EditTrip extends React.Component {
     };
     
     render() {
-        console.log(this.props)
         const { open } = this.state
         const { data } = this.props
         return (
