@@ -8,5 +8,14 @@ function get(url, params){
     return axios.get(url, { params });
 }
 
+function post(url, body){
+    url = host + url;
+    return axios.post(url,  body );
+}
 
-export default { get };
+function remove(url){
+    url = host + url;
+    return axios.delete(url);
+}
+
+export default { get, post, remove };
