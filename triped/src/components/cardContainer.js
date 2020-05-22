@@ -13,8 +13,15 @@ export default class CardContainer extends React.Component {
         cardList: [],
         loading: true,
         error: false,
-        title: ''
+        title: '',
+        open: true
     }
+
+    closeDialog = () => {
+        this.setState({
+            open: false,
+        })
+    };
 
     componentDidMount() {
         this.queryData()
@@ -59,8 +66,9 @@ export default class CardContainer extends React.Component {
     removeCard = (item_id) => {
         request.remove('/trips/' + item_id)
             .then(res => {
-               // this.setState ...
+                this.setState({ cardList: this.state.cardList.filter(item => item_id != item._id.$oid) })
             })
+        this.closeDialog()
     }
     
     render () {
