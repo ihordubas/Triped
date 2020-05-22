@@ -13,7 +13,7 @@ import './cardDetails.css'
 
 class HouseData extends React.Component {
     render () {
-        const { data } = this.props
+        const { data, getItem, id, updateRequest } = this.props
         return (
             <>
                 <div className="card-label">
@@ -30,7 +30,7 @@ class HouseData extends React.Component {
                         <div className="label-price">{data.price}$</div>
                     </div>
                     <div className="card-buttons">
-                        <EditTrip data={data}/>
+                        <EditTrip updateRequest={updateRequest} id={id} data={data} getItem={getItem}/>
                         <CloseRoundedIcon fontSize="small"/>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ class MovingData extends React.Component {
     }
     
     render () {
-        const { data } = this.props
+        const { data, getItem, id, updateRequest } = this.props
         return (
             <>  
                 <div className="card-label">
@@ -64,7 +64,7 @@ class MovingData extends React.Component {
                         <div className="label-price">{data.price}$</div>
                     </div>
                     <div className="card-buttons">
-                        <EditTrip data={data}/>
+                        <EditTrip updateRequest={updateRequest} id={id} data={data} getItem={getItem}/>
                         <CloseRoundedIcon fontSize="small"/>
                     </div>
                 </div>                    

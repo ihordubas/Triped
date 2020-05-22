@@ -18,4 +18,9 @@ function remove(url){
     return axios.delete(url);
 }
 
-export default { get, post, remove };
+function put(url, body){
+    url = host + url;
+    return axios.put(url,  body );
+}
+
+export default { get, post, remove, put };
