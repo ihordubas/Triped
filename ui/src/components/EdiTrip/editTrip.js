@@ -5,7 +5,9 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
-import request from "../services/request";
+import request from "../../services/request";
+
+import './editTrip.css'
 
 
 export default class EditTrip extends React.Component {

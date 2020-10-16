@@ -2,10 +2,10 @@ import React from 'react';
 
 import TextField from '@material-ui/core/TextField';
 
-import CardItem from './cardItem'
-import request from "../services/request";
+import CardItem from '../CardItem/cardItem'
+import request from "../../services/request";
 
-import './card.css'
+import '../CardContainer/cardContainer.css'
 
 
 export default class CardContainer extends React.Component {

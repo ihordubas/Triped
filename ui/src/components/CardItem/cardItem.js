@@ -6,9 +6,9 @@ import DialogContent from "@material-ui/core/DialogContent";
 import Button from '@material-ui/core/Button';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-import CardDetails from './cardDetails'
+import CardDetails from '../CardDetails/cardDetails'
 
-import './card.css'
+import '../CardItem/cardItem.css'
 
 
 export default class CardItem extends React.Component {
