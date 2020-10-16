@@ -86,8 +86,7 @@ export default class CardContainer extends React.Component {
                 </form>
                 <div className="card-grid">                
                     {this.state.cardList.map(item => 
-                        <CardItem 
-                            // key={item._id.$oid} 
+                        <CardItem  
                             item={item} 
                             removeCard={this.removeCard} 
                             title={item.title} 
