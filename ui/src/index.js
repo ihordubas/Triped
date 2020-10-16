@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import CardContainer from './components/cardContainer'
+import CardContainer from './components/CardContainer/cardContainer'
 
 import './index.css';
 

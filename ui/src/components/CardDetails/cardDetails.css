@@ -1,0 +1,28 @@
+.card-details {
+    background-color: #697d71;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 15px;
+}
+
+.card-details:hover  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card-title-inside {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.button-plus {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 15px 25px 0;
+    color: white;
+}

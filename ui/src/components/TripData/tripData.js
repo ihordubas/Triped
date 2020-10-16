@@ -6,9 +6,9 @@ import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
 import DriveEtaRoundedIcon from '@material-ui/icons/DriveEtaRounded';
 import DirectionsBusRoundedIcon from '@material-ui/icons/DirectionsBusRounded';
 
-import EditTrip from './editTrip'
+import EditTrip from '../EdiTrip/editTrip'
 
-import './cardDetails.css'
+import './tripData.css'
 
 
 class HouseData extends React.Component {

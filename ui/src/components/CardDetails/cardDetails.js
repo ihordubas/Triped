@@ -2,9 +2,10 @@ import React from 'react';
 
 import AddBoxOutlinedIcon from '@material-ui/icons/AddBoxOutlined';
 
-import {HouseData, MovingData} from "./tripData";
-import request from "../services/request";
+import {HouseData, MovingData} from "../TripData/tripData";
+import request from "../../services/request";
 
+import '../CardDetails/cardDetails.css'
 
 export default class CardDetails extends React.Component {
     state = {
@@ -47,9 +48,6 @@ export default class CardDetails extends React.Component {
         })
     }
     
-    // componentDidMount ()
-    //get request with id, put in state and change ітем на ітем зі стейту
-    //гет айтем в компонет дід маунт (квері дата)
     sumOfPrices = () => {
         const { item } = this.props
         return item.trips.reduce((prevValue, currentValue) => prevValue.price + currentValue.price)
@@ -62,7 +60,7 @@ export default class CardDetails extends React.Component {
             <div className="card-details">
                 <div className="card-title-inside" onClick={toogleShowDetails}>{trip.title}</div>
                  {trip.trips && trip.trips.map(element => {
-                    if (element.type == 'house') return <HouseData updateRequest={this.updateRequest} id={id} data={element} getItem={this.getItem} />
+                    if (element.type === 'house') return <HouseData updateRequest={this.updateRequest} id={id} data={element} getItem={this.getItem} />
                     else return <MovingData updateRequest={this.updateRequest} id={id} data={element} getItem={this.getItem}/>
                 })}
                 <div className="button-plus">

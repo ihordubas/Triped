@@ -1,0 +1,31 @@
+.edit-inputs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.edit-inputs > input, .edit-price > input {
+    margin: 15px;
+    padding: 5px;
+    color: #595454; 
+    background-color: #f5f0ed;
+    outline: 0;
+    border: 0;
+    border-bottom: 2px solid #697d71;
+}
+
+.edit-price {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.edit-price > input {
+    width: 70px;
+}
+
+#buttons-dialog {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}

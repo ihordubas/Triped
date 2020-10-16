@@ -1,0 +1,13 @@
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+
+#card-input  {
+    margin: 70px 0;
+    display: flex;
+    justify-content: center;
+}
